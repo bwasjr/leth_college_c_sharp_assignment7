@@ -11,15 +11,15 @@ namespace Assignment6
 {
     internal class HockeyPlayer : IComparable<HockeyPlayer>
     {
-        private readonly String playerName;
+        private String playerName;
         //private int jerseyNumber;
         private int goalsScored;
         private static String sortCriteria = "Alphabetically";
         private static bool inverse = false;
 
 
-        public String Name { get { return playerName; } }
-        public int JerseyNumber { get; }
+        public String Name { get { return playerName; } set { playerName = value; } }
+        public int JerseyNumber { get; set; }
 
         public int GoalsScored { get { return goalsScored; } set { goalsScored = value; } }
 

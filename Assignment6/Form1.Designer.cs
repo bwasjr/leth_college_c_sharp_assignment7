@@ -37,13 +37,14 @@
             textBox3 = new TextBox();
             label4 = new Label();
             textBox4 = new TextBox();
-            richTextBox1 = new RichTextBox();
             label5 = new Label();
             button2 = new Button();
             comboBox1 = new ComboBox();
             label6 = new Label();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
+            listBox1 = new ListBox();
+            button3 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -122,15 +123,6 @@
             textBox4.Size = new Size(54, 27);
             textBox4.TabIndex = 8;
             // 
-            // richTextBox1
-            // 
-            richTextBox1.Font = new Font("Courier New", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            richTextBox1.Location = new Point(471, 98);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(472, 464);
-            richTextBox1.TabIndex = 9;
-            richTextBox1.Text = "";
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -190,18 +182,41 @@
             radioButton2.Text = "Descending";
             radioButton2.UseVisualStyleBackColor = true;
             // 
+            // listBox1
+            // 
+            listBox1.Font = new Font("Courier New", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 17;
+            listBox1.Location = new Point(471, 110);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(510, 463);
+            listBox1.TabIndex = 16;
+            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            listBox1.MouseDoubleClick += listBox1_MouseDoubleClick;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(280, 229);
+            button3.Name = "button3";
+            button3.Size = new Size(124, 29);
+            button3.TabIndex = 17;
+            button3.Text = "Update Player";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(993, 586);
+            Controls.Add(button3);
+            Controls.Add(listBox1);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
             Controls.Add(label6);
             Controls.Add(comboBox1);
             Controls.Add(button2);
             Controls.Add(label5);
-            Controls.Add(richTextBox1);
             Controls.Add(textBox4);
             Controls.Add(label4);
             Controls.Add(textBox3);
@@ -229,12 +244,13 @@
         private TextBox textBox3;
         private Label label4;
         private TextBox textBox4;
-        private RichTextBox richTextBox1;
         private Label label5;
         private Button button2;
         private ComboBox comboBox1;
         private Label label6;
         private RadioButton radioButton1;
         private RadioButton radioButton2;
+        private ListBox listBox1;
+        private Button button3;
     }
 }
