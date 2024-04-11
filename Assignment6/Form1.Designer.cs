@@ -149,6 +149,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Alphabetically", "Jersey Number", "Goals Scored" });
             comboBox1.Location = new Point(123, 362);
@@ -216,28 +217,28 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { loadFileToolStripMenuItem, saveFileToolStripMenuItem, closeFileToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(993, 28);
+            menuStrip1.Size = new Size(993, 25);
             menuStrip1.TabIndex = 18;
             menuStrip1.Text = "menuStrip1";
             // 
             // loadFileToolStripMenuItem
             // 
             loadFileToolStripMenuItem.Name = "loadFileToolStripMenuItem";
-            loadFileToolStripMenuItem.Size = new Size(103, 24);
+            loadFileToolStripMenuItem.Size = new Size(103, 21);
             loadFileToolStripMenuItem.Text = "Load File";
             loadFileToolStripMenuItem.Click += loadFileToolStripMenuItem_Click;
             // 
             // saveFileToolStripMenuItem
             // 
             saveFileToolStripMenuItem.Name = "saveFileToolStripMenuItem";
-            saveFileToolStripMenuItem.Size = new Size(103, 24);
+            saveFileToolStripMenuItem.Size = new Size(103, 21);
             saveFileToolStripMenuItem.Text = "Save File";
             saveFileToolStripMenuItem.Click += saveFileToolStripMenuItem_Click;
             // 
             // closeFileToolStripMenuItem
             // 
             closeFileToolStripMenuItem.Name = "closeFileToolStripMenuItem";
-            closeFileToolStripMenuItem.Size = new Size(67, 24);
+            closeFileToolStripMenuItem.Size = new Size(67, 21);
             closeFileToolStripMenuItem.Text = "Close";
             closeFileToolStripMenuItem.Click += closeFileToolStripMenuItem_Click;
             // 

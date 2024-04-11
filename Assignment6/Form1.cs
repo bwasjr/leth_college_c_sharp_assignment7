@@ -4,7 +4,6 @@ using System.Xml.Linq;
 
 namespace Assignment6
 {
-
     public partial class Form1 : Form
     {
         HockeyPlayer[] hockeyTeam;
@@ -12,8 +11,6 @@ namespace Assignment6
         HockeyPlayer player = new HockeyPlayer("Default", 0, 0);
         String outPutFormat = "{0, -20}|{1}|{2}\n";
         int oldJerseyNumber = -99;
-
-
 
         public Form1()
         {
@@ -24,6 +21,7 @@ namespace Assignment6
             InitializeComponent();
             setCurrentPlayers();
             comboBox1.SelectedIndex = 0;
+            
 
         }
 
@@ -96,10 +94,8 @@ namespace Assignment6
             else
                 player.Inverse = false;
 
-            if (currentPlayers > 1)
-            {
-                Array.Sort(hockeyTeam);
-            }
+            Array.Sort(hockeyTeam);
+            
 
 
             foreach (HockeyPlayer player in hockeyTeam)
@@ -111,26 +107,24 @@ namespace Assignment6
 
         private bool isJerseyNumberExistent(int number)
         {
-            int i = 0;
-
-            while (hockeyTeam[i] != null)
+            int i = 29;
+            while (hockeyTeam[i] != null && i > 0)
             {
                 if (number == hockeyTeam[i].JerseyNumber)
                     return true;
-                i++;
+                i--;
             }
             return false;
         }
 
         private bool isNameExistent(String name)
         {
-            int i = 0;
-
-            while (hockeyTeam[i] != null)
+            int i = 29;
+            while (hockeyTeam[i] != null && i > 0)
             {
                 if (name == hockeyTeam[i].Name)
                     return true;
-                i++;
+                i--;
             }
             return false;
         }
