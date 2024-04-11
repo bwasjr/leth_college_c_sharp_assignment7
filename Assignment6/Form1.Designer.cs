@@ -45,11 +45,16 @@
             radioButton2 = new RadioButton();
             listBox1 = new ListBox();
             button3 = new Button();
+            menuStrip1 = new MenuStrip();
+            loadFileToolStripMenuItem = new ToolStripMenuItem();
+            saveFileToolStripMenuItem = new ToolStripMenuItem();
+            closeFileToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(123, 229);
+            button1.Location = new Point(123, 276);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(92, 31);
@@ -61,7 +66,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(5, 69);
+            label1.Location = new Point(5, 116);
             label1.Name = "label1";
             label1.Size = new Size(93, 20);
             label1.TabIndex = 1;
@@ -70,7 +75,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(5, 127);
+            label2.Location = new Point(5, 174);
             label2.Name = "label2";
             label2.Size = new Size(106, 20);
             label2.TabIndex = 2;
@@ -79,7 +84,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(5, 184);
+            label3.Location = new Point(5, 231);
             label3.Name = "label3";
             label3.Size = new Size(96, 20);
             label3.TabIndex = 3;
@@ -87,21 +92,21 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(123, 69);
+            textBox1.Location = new Point(123, 116);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(281, 27);
             textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(123, 124);
+            textBox2.Location = new Point(123, 171);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(281, 27);
             textBox2.TabIndex = 5;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(123, 177);
+            textBox3.Location = new Point(123, 224);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(281, 27);
             textBox3.TabIndex = 6;
@@ -109,7 +114,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(0, 1);
+            label4.Location = new Point(5, 66);
             label4.Name = "label4";
             label4.Size = new Size(107, 20);
             label4.TabIndex = 7;
@@ -118,7 +123,7 @@
             // textBox4
             // 
             textBox4.Enabled = false;
-            textBox4.Location = new Point(123, 1);
+            textBox4.Location = new Point(123, 66);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(54, 27);
             textBox4.TabIndex = 8;
@@ -134,7 +139,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(280, 355);
+            button2.Location = new Point(280, 361);
             button2.Name = "button2";
             button2.Size = new Size(124, 29);
             button2.TabIndex = 11;
@@ -146,7 +151,7 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Alphabetically", "Jersey Number", "Goals Scored" });
-            comboBox1.Location = new Point(123, 356);
+            comboBox1.Location = new Point(123, 362);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(151, 28);
             comboBox1.TabIndex = 12;
@@ -154,7 +159,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(123, 333);
+            label6.Location = new Point(123, 339);
             label6.Name = "label6";
             label6.Size = new Size(109, 20);
             label6.TabIndex = 13;
@@ -164,7 +169,7 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Checked = true;
-            radioButton1.Location = new Point(123, 399);
+            radioButton1.Location = new Point(123, 405);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(99, 24);
             radioButton1.TabIndex = 14;
@@ -175,7 +180,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(123, 429);
+            radioButton2.Location = new Point(123, 435);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(108, 24);
             radioButton2.TabIndex = 15;
@@ -196,13 +201,45 @@
             // 
             // button3
             // 
-            button3.Location = new Point(280, 229);
+            button3.Location = new Point(280, 276);
             button3.Name = "button3";
             button3.Size = new Size(124, 29);
             button3.TabIndex = 17;
             button3.Text = "Update Player";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Font = new Font("Courier New", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { loadFileToolStripMenuItem, saveFileToolStripMenuItem, closeFileToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(993, 28);
+            menuStrip1.TabIndex = 18;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // loadFileToolStripMenuItem
+            // 
+            loadFileToolStripMenuItem.Name = "loadFileToolStripMenuItem";
+            loadFileToolStripMenuItem.Size = new Size(103, 24);
+            loadFileToolStripMenuItem.Text = "Load File";
+            loadFileToolStripMenuItem.Click += loadFileToolStripMenuItem_Click;
+            // 
+            // saveFileToolStripMenuItem
+            // 
+            saveFileToolStripMenuItem.Name = "saveFileToolStripMenuItem";
+            saveFileToolStripMenuItem.Size = new Size(103, 24);
+            saveFileToolStripMenuItem.Text = "Save File";
+            saveFileToolStripMenuItem.Click += saveFileToolStripMenuItem_Click;
+            // 
+            // closeFileToolStripMenuItem
+            // 
+            closeFileToolStripMenuItem.Name = "closeFileToolStripMenuItem";
+            closeFileToolStripMenuItem.Size = new Size(67, 24);
+            closeFileToolStripMenuItem.Text = "Close";
+            closeFileToolStripMenuItem.Click += closeFileToolStripMenuItem_Click;
             // 
             // Form1
             // 
@@ -226,9 +263,13 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(button1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Form1";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -252,5 +293,9 @@
         private RadioButton radioButton2;
         private ListBox listBox1;
         private Button button3;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem loadFileToolStripMenuItem;
+        private ToolStripMenuItem saveFileToolStripMenuItem;
+        private ToolStripMenuItem closeFileToolStripMenuItem;
     }
 }
